@@ -1,0 +1,181 @@
+button, .zx-button {
+  @include zx-transition(0.15s linear);
+  @include zx-user-select(none);
+
+  background-color: #dbdfe3;
+  border: 1px solid #dbdfe3;
+  color: #4d5259;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: inherit;
+  padding: .375rem .75rem;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #edeff1;
+    border-color: #edeff1;
+  }
+}
+
+.zx-button-primary {
+  background-color: #f26444;
+  border-color: #f26444;
+  color: #fff;
+
+  &:hover {
+    background-color: #e85c3c;
+    border-color: #e85c3c;
+  }
+}
+
+.zx-button-action {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.zx-button-block {
+  display: block;
+  width: 100%;
+}
+
+.zx-button-square {
+  border: none;
+  height: 36px;
+  padding: 8px;
+  width: 36px;
+}
+
+.zx-button-outline {
+  background-color: #fff;
+}
+
+.zx-button-disabled {
+  pointer-events: none;
+}
+
+.zx-button-subtle {
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover {
+    background-color: #dbdfe3;
+    border: 1px solid #dbdfe3;
+  }
+}
+
+.zx-button-link {
+  background: 0 0;
+  border-color: transparent;
+  box-shadow: none;
+  color: #f26444;
+  text-decoration: none;
+
+  &:hover {
+    background: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+  }
+}
+
+.zx-button-group {
+  @include zx-display-inline-flex;
+
+  margin-bottom: 1rem;
+  vertical-align: initial;
+}
+
+.zx-button-dropdown {
+  padding-right: 2rem;
+
+  &:after {
+    border: 4px solid transparent;
+    border-top-color: #333;
+    content: "";
+    height: 0;
+    left: 100%;
+    margin-left: -16px;
+    top: 16px;
+    opacity: .8;
+    position: absolute;
+    width: 0;
+  }
+}
+
+.zx-button-split-container {
+  @include zx-display-inline-flex;
+}
+
+.zx-button-split {
+  span {
+    display: none;
+  }
+
+  &:after {
+    border: 4px solid transparent;
+    border-top-color: #333;
+    content: "";
+    height: 0;
+    opacity: .8;
+    position: relative;
+    top: 40%;
+    width: 0;
+  }
+}
+
+.zx-button-danger {
+  background-color: #f96868;
+  border-color: #f96868;
+  color: #fff;
+}
+
+.zx-button-danger:hover {
+  background-color: #fa8181;
+  border-color: #fa8181;
+  color: #fff;
+}
+
+.zx-button-round {
+  border-radius: 10rem;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+
+  svg {
+    margin-top: 5px;
+  }
+}
+
+.zx-button-group-toggle > .zx-button,
+.zx-button-group-toggle > .zx-button-group > .zx-button {
+  margin-bottom: 0;
+}
+
+.zx-button-group-toggle > .zx-button input[type="radio"],
+.zx-button-group-toggle > .zx-button input[type="checkbox"],
+.zx-button-group-toggle > .zx-button-group > .zx-button input[type="radio"],
+.zx-button-group-toggle > .zx-button-group > .zx-button input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+
+.zx-button-group > .zx-button:not(:last-child):not(.dropdown-toggle),
+.zx-button-group > .zx-button-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.zx-button-group > .zx-button:not(:first-child),
+.zx-button-group > .zx-button-group:not(:first-child) > .zx-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
